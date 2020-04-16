@@ -24,17 +24,16 @@ public class RoomPresenter implements Contract.Presenter {
                 .allowMainThreadQueries()
                 .build();
 
-//        for(int i = 0; i < 10; i++){
-//            hotelDB.getHotelDao().addNewRoom(new HotelRoomEntity((i+1)+"", true));
-//        }
+        for(int i = 0; i < 10; i++){
+            hotelDB.getHotelDao().addNewRoom(new HotelRoomEntity((i+1)+"", true));
+        }
 
-        //hotelDB.getHotelDao().addNewUser(new UserEntity("Dan", "password"));
+        hotelDB.getHotelDao().addNewUser(new UserEntity("Dan", "password"));
 
         List<HotelRoomEntity> HotelRoomList = hotelDB.getHotelDao().getAllAvailableRoom();
         Log.d("TAG_X", "Hotel Room Size: " + HotelRoomList.size());
         Log.d("TAG_X", "Hotel Room Number: " + HotelRoomList.get(0).getRoomNumber());
         Log.d("TAG_X", "Hotel Room Availability: " + HotelRoomList.get(0).isRoomAvailable());
-
 
     }
 
